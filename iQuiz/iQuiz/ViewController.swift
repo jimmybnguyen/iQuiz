@@ -25,7 +25,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.myDesc.text = subjectDesc[indexPath.row]
         return cell
     }
-
+    
+    @IBAction func settingsAlert(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Settings", message: "Settings go here", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
