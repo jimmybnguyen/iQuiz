@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     let subjects = ["Mathematics", "Marvel Super Heroes", "Science"]
-    let subjectDesc = ["Math descdfgdfdgdfsgterge", "People with powers", "Science descfdgdfgs"]
+    let subjectDesc = ["The bain of my existence", "People in tights", "Fake news"]
     let subjectImgs = ["Math", "Marvel", "Science"]
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
