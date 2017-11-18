@@ -102,12 +102,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
-                                    <action selector="settingsAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fna-dV-Cnj"/>
+                                    <segue destination="gT6-1t-fsM" kind="popoverPresentation" identifier="showSettings" popoverAnchorView="ifc-jj-fld" id="czD-nJ-Qya">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
-                            <connections>
-                                <action selector="settingsAlert:" destination="BYZ-38-t0r" id="Hb4-lr-epE"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -117,6 +116,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="116.49175412293854"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KmH-wd-qh4">
+            <objects>
+                <viewController storyboardIdentifier="popover" id="gT6-1t-fsM" customClass="ViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WD3-nq-sLo">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnZ-5a-1KG">
+                                <rect key="frame" x="95" y="104" width="60" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Check Now"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AnZ-5a-1KG" firstAttribute="centerX" secondItem="WD3-nq-sLo" secondAttribute="centerX" id="GsZ-K7-ezz"/>
+                            <constraint firstAttribute="bottom" secondItem="AnZ-5a-1KG" secondAttribute="bottom" constant="20" symbolic="YES" id="oOa-yE-Jut"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vco-md-btm"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="200" height="100"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="250" height="150"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P0v-gM-K3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="621"/>
         </scene>
         <!--Question-->
         <scene sceneID="5e3-4r-SKY">

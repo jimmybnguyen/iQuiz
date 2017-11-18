@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPopoverPresentationControllerDelegate  {
     
     var selectedQuestions:[Any]?
     
@@ -41,16 +41,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let other = segue.destination as! QuestionViewController
-        other.questions = selectedQuestions
-        other.questionIndex = 0
-        other.score = 0
+        if (segue.identifier == "showSettings") {
+            let popoverViewController = segue.destination
+            popoverViewController.popoverPresentationController?.delegate = self
+        } else {
+            let other = segue.destination as! QuestionViewController
+            other.questions = selectedQuestions
+            other.questionIndex = 0
+            other.score = 0
+        }
     }
     
-    @IBAction func settingsAlert(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Settings", message: "Settings go here", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
     }
 
     override func didReceiveMemoryWarning() {
