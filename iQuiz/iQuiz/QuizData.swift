@@ -19,12 +19,17 @@ class QuizData: NSObject {
         super.init()
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         fileURL = DocumentDirURL.appendingPathComponent("quiz-data").appendingPathExtension("json")
-        load()
+        load(ViewController.shared.sourceURL)
     }
     
-    func load() {
-        do{
-            var content = NSData(contentsOf: URL(string: urlSource)!)
+    func load(_ newSource: String) {
+        do {
+            var content: NSData?
+            if (newSource != "") {
+                content = NSData(contentsOf: URL(string: newSource)!)
+            } else {
+                 content = NSData(contentsOf: URL(string: urlSource)!)
+            }
             if (content == nil) {
                 do {
                     content = try NSData(contentsOf: fileURL!)

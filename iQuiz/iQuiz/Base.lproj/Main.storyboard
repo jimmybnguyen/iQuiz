@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gDT-EJ-9cU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gDT-EJ-9cU" userLabel="table">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -110,6 +110,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="table" destination="gDT-EJ-9cU" id="27N-D7-GO7"/>
                         <segue destination="R93-vd-kwp" kind="show" identifier="questionSegue" id="NaY-Mv-CmU"/>
                     </connections>
                 </viewController>
@@ -126,25 +127,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnZ-5a-1KG">
-                                <rect key="frame" x="95" y="104" width="60" height="26"/>
+                                <rect key="frame" x="95" y="113" width="60" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Check Now"/>
+                                <connections>
+                                    <action selector="refreshData:" destination="gT6-1t-fsM" eventType="touchUpInside" id="h2r-ys-X0R"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTE-Ul-0MN">
+                                <rect key="frame" x="42" y="60" width="166" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oTE-Ul-0MN" firstAttribute="leading" secondItem="Vco-md-btm" secondAttribute="leading" constant="42" id="Akj-Qq-ic4"/>
                             <constraint firstItem="AnZ-5a-1KG" firstAttribute="centerX" secondItem="WD3-nq-sLo" secondAttribute="centerX" id="GsZ-K7-ezz"/>
-                            <constraint firstAttribute="bottom" secondItem="AnZ-5a-1KG" secondAttribute="bottom" constant="20" symbolic="YES" id="oOa-yE-Jut"/>
+                            <constraint firstItem="oTE-Ul-0MN" firstAttribute="centerY" secondItem="WD3-nq-sLo" secondAttribute="centerY" id="N0G-wM-zDh"/>
+                            <constraint firstItem="oTE-Ul-0MN" firstAttribute="centerX" secondItem="AnZ-5a-1KG" secondAttribute="centerX" id="Ukr-pX-Mro"/>
+                            <constraint firstAttribute="bottom" secondItem="AnZ-5a-1KG" secondAttribute="bottom" constant="11" id="oOa-yE-Jut"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vco-md-btm"/>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="200" height="100"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="250" height="150"/>
+                    <connections>
+                        <outlet property="source" destination="oTE-Ul-0MN" id="O5P-iQ-YST"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0v-gM-K3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115" y="621"/>
+            <point key="canvasLocation" x="113.59999999999999" y="620.68965517241384"/>
         </scene>
         <!--Question-->
         <scene sceneID="5e3-4r-SKY">
