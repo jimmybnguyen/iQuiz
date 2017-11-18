@@ -21,6 +21,8 @@
 		BFB69AC61FAE50F300AF89B4 /* Marvel.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB69AC31FAE50F300AF89B4 /* Marvel.png */; };
 		BFB69AC71FAE50F300AF89B4 /* Math.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB69AC41FAE50F300AF89B4 /* Math.png */; };
 		BFB69AC91FAE52A800AF89B4 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB69AC81FAE52A800AF89B4 /* ViewControllerTableViewCell.swift */; };
+		BFC22F391FBE6B7C00FEFD0C /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC22F381FBE6B7C00FEFD0C /* QuizData.swift */; };
+		BFC688B01FBF9EAD00C3BEE8 /* quiz-data.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFC688AF1FBF9EAC00C3BEE8 /* quiz-data.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		BFB69AC31FAE50F300AF89B4 /* Marvel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marvel.png; sourceTree = "<group>"; };
 		BFB69AC41FAE50F300AF89B4 /* Math.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Math.png; sourceTree = "<group>"; };
 		BFB69AC81FAE52A800AF89B4 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		BFC22F381FBE6B7C00FEFD0C /* QuizData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
+		BFC688AF1FBF9EAC00C3BEE8 /* quiz-data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "quiz-data.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		BFB69A931FAE4A8000AF89B4 /* iQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				BFC688AF1FBF9EAC00C3BEE8 /* quiz-data.txt */,
 				BFB69AC41FAE50F300AF89B4 /* Math.png */,
 				BFB69AC31FAE50F300AF89B4 /* Marvel.png */,
 				BFB69AC21FAE50F200AF89B4 /* Science.png */,
@@ -121,6 +126,7 @@
 				BF42D8B01FBA574D003E371C /* AnswerViewController.swift */,
 				BF42D8B21FBAD10D003E371C /* ResultViewController.swift */,
 				BFB69AC81FAE52A800AF89B4 /* ViewControllerTableViewCell.swift */,
+				BFC22F381FBE6B7C00FEFD0C /* QuizData.swift */,
 				BFB69A9B1FAE4A8000AF89B4 /* Assets.xcassets */,
 				BFB69A9D1FAE4A8000AF89B4 /* LaunchScreen.storyboard */,
 				BFB69AA01FAE4A8000AF89B4 /* Info.plist */,
@@ -253,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC688B01FBF9EAD00C3BEE8 /* quiz-data.txt in Resources */,
 				BFB69A9F1FAE4A8000AF89B4 /* LaunchScreen.storyboard in Resources */,
 				BFB69AC71FAE50F300AF89B4 /* Math.png in Resources */,
 				BFB69AC51FAE50F300AF89B4 /* Science.png in Resources */,
@@ -283,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC22F391FBE6B7C00FEFD0C /* QuizData.swift in Sources */,
 				BFB69A971FAE4A8000AF89B4 /* ViewController.swift in Sources */,
 				BFB69A951FAE4A8000AF89B4 /* AppDelegate.swift in Sources */,
 				BF42D8B11FBA574D003E371C /* AnswerViewController.swift in Sources */,
